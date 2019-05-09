@@ -2,12 +2,8 @@
 require_once('Classes/Crawler.php');
 
 
-$form ='
-    <form method="POST">
-        <input type="text" id="urlName" name="urlName" placeholder="What URL to Crawl Today?">
-        <input type="number" id="crawlDepth">
-        <button type="Submit">Init Crawl</button>
-    </form>';
+
+$form = include('forms/Basic_Crawl_Interface');
 
 if($_REQUEST){
     $name = $_REQUEST['urlName'];
@@ -15,7 +11,7 @@ if($_REQUEST){
 
     $crawl =[
         'URL' => $name,
-        'TAG' => ['TAG' => 'img']
+        'TAG' => ['TAG' => 'a']
     ];
 
     $crawlPage = new Crawler($crawl);

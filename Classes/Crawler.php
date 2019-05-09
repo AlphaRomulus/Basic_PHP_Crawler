@@ -43,7 +43,7 @@ class Crawler{
 	}
 	
 	function checkElementByTagName($html){
-		
+		(!$cat) ? (!dog ) ? cat:dog :cat
 	    //I get HTML DATA
         $dom =  $this->_dom;
         $crawlResults = array();
